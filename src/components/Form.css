@@ -1,0 +1,33 @@
+form {
+  @apply flex-grow flex flex-col gap-y-6 mt-10 items-center;
+}
+
+.input-field,
+#grade-type,
+#time-limit {
+  @apply rounded-md w-[40%] p-2  border-[1px] border-gray-300;
+}
+
+#grade-type {
+  @apply outline-none;
+}
+
+.submit {
+  @apply h-[2.5rem] bg-blue-500 text-white  text-lg flex items-center justify-center w-[20%] rounded-md;
+}
+
+.questions-wrapper {
+  @apply flex flex-col w-[40%]  gap-y-8;
+}
+.question {
+  @apply flex flex-col gap-y-6 relative;
+}
+.question .question-field {
+  @apply w-full;
+}
+.options {
+  @apply flex items-center flex-wrap gap-x-4 gap-y-6;
+}
+.options .option-field {
+  @apply min-w-[46%] flex-grow;
+}
