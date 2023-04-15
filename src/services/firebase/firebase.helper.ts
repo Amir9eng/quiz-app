@@ -1,11 +1,23 @@
 import { collectionRef } from '.';
 import { addDoc, getDocs, getDoc, doc } from 'firebase/firestore';
 
-export const addQuiz = async (quiz: any) => {
+export interface IQuiz {
+  quizName: string;
+  quizDescription: string;
+  timeLimit: string;
+  gradeType: string;
+  quizQuestions: {
+    question: string;
+    options: string[];
+    answer: string;
+  }[];
+}
+
+export const addQuiz = async (quiz: IQuiz) => {
   try {
     console.log('hereeee');
 
-    const docRef = await addDoc(collectionRef, { testing: 'yesss' });
+    const docRef = await addDoc(collectionRef, quiz);
     console.log('after adding');
 
     return docRef.id;

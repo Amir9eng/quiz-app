@@ -2,7 +2,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously } from 'firebase/auth';
 import { collection, getFirestore } from 'firebase/firestore';
-// import  from 'firebase/firestore';
 
 import {
   firebaseApiKey,
